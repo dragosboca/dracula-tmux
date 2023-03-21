@@ -58,9 +58,9 @@ getFullMessage()
     OUTPUT_STRING="${current_user}@"
   fi
 
-  if [ ! -z "$current_cluster" ]
+  if [ ! -z "$current_context" ]
   then
-    OUTPUT_STRING="${OUTPUT_STRING}${current_cluster}"
+    OUTPUT_STRING="${OUTPUT_STRING}${current_context}"
   fi
 
   if [ ! -z "$current_namespace" ]
