@@ -13,7 +13,6 @@ source $current_dir/utils.sh
 
 current_context=$(kubectl config view --minify --output 'jsonpath={.current-context}'; echo)
 current_user=$(kubectl config view --minify --output 'jsonpath={.contexts[?(@.name=="'$current_context'")].context.user}'; echo)
-current_cluster=$(kubectl config view --minify --output 'jsonpath={.contexts[?(@.name=="'$current_context'")].context.cluster}'; echo)
 current_namespace=$(kubectl config view --minify --output 'jsonpath={.contexts[?(@.name=="'$current_context'")].context.namespace}'; echo)
 
 current_account_id=""
