@@ -57,11 +57,6 @@ getFullMessage()
     OUTPUT_STRING="${current_user}@"
   fi
 
-  if [ ! -z "$current_context" ]
-  then
-    OUTPUT_STRING="${OUTPUT_STRING}${current_context}"
-  fi
-
   if [ ! -z "$current_namespace" ]
   then
     OUTPUT_STRING="${OUTPUT_STRING}:${current_namespace}"
