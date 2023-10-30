@@ -14,7 +14,7 @@ main()
   RATE=$(get_tmux_option "@dracula-refresh-rate" 5)
   OUTPUT_STRING=""
 
-  OUTPUT_STRING="${AWS_DEFAULT_PROFILE:-${AWS_PROFILE:-''}}"
+  OUTPUT_STRING=$(get_tmux_option "@aws-profile" "default")
   if [ "$label" = "" ]
   then
     echo "${OUTPUT_STRING}"
