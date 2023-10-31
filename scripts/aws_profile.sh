@@ -7,6 +7,7 @@ label=$1
 current_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 source $current_dir/utils.sh
 
+TMUX_AWS_PROFILE=$(tmux show-options "@aws-profile")
 
 main()
 {
@@ -14,7 +15,7 @@ main()
   RATE=$(get_tmux_option "@dracula-refresh-rate" 5)
   OUTPUT_STRING=""
 
-  OUTPUT_STRING=$(get_tmux_option "@aws-profile" "default")
+  OUTPUT_STRING="${TMUX_AWS_PROFILE:-default}"
   if [ "$label" = "" ]
   then
     echo "${OUTPUT_STRING}"
