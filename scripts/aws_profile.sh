@@ -7,7 +7,7 @@ label=$1
 current_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 source $current_dir/utils.sh
 
-TMUX_AWS_PROFILE=$(tmux show-options -qv "@aws-profile")
+TMUX_AWS_PROFILE=$(tmux show-options -pqv "@aws-profile")
 
 main()
 {
