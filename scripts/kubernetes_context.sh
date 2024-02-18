@@ -54,7 +54,7 @@ main() {
 
 getFullMessage() {
   if [ ! -z "$current_account_id" ]; then
-    OUTPUT_STRING="${current_account_id}/"
+    OUTPUT_STRING="${current_account_id}"
   fi
 
   if [ ! -z "$current_user" ]; then
