@@ -24,7 +24,7 @@ current_namespace=$(
   echo
 )
 
-current_account_id=""
+current_account_id="$current_context"
 if [[ "$current_cluster" =~ ^arn:aws:eks:[a-z0-9\-]*:[0-9]*:cluster/[a-z0-9\-]*$ ]]; then
   if [ "$extract_account" = "true" ]; then
     current_account_id=$(echo "$current_cluster" | cut -d':' -f5)
